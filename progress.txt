@@ -1,0 +1,56 @@
+We have successfully migrated the core of the Rakshak system from Python to C++. Below is the classification of completed tasks based on our
+  migration phases:
+
+
+  Phase 1: Ecosystem & Tooling (DONE)
+   * Project Structure: Created a structured C++ directory with include/ and src/.
+   * Build System: Developed a robust CMakeLists.txt integrating OpenCV, CUDA, Threads, and standard include paths.
+   * Dependencies: Integrated nlohmann/json for data parsing and cpp-httplib for networking.
+   * Version Control: Added a tailored .gitignore to exclude binaries, build artifacts, and heavy model files.
+
+
+  Phase 2: Foundation & State Management (DONE)
+   * Unified Constants: Migrated Globals.py to Globals.h using inline constexpr.
+   * Type Safety: Converted Python enums to a C++ enum class OpMode.
+   * Thread-Safe State: Implemented SharedState using std::atomic for flags/values and std::shared_mutex for high-frequency detection data to
+     replace Python’s multiprocessing.Manager.
+   * Data Management: Built DataManager to natively parse JSON configuration files (FOV, PID, Depth) into optimized C++ maps.
+   * Interpolation Engine: Created MathUtils to provide linear interpolation for depth and motor command mapping.
+
+
+  Phase 3: Hardware Interfaces (READY FOR INTEGRATION)
+   * Serial Communication: Built a custom SerialPort class using termios for high-speed Arduino communication.
+   * Hardware Controllers: Created TriggerController (Solenoid/Laser) and ZoomController (VISCA protocols) mapping the exact command set from the
+     Python implementation.
+   * Motor Wrapper: Implemented MotorController as an abstraction layer, currently utilizing a mock implementation that is ready to be swapped with
+     moteus-cpp SocketCAN calls.
+
+
+  Phase 4: Vision & Inference Pipeline (DONE - PORTABLE)
+   * High-Speed Capture: Developed CameraReader with a dedicated worker thread to minimize frame latency.
+   * Portable Inference: Transitioned from hardware-locked TensorRT .engine logic to a robust OpenCV DNN ONNX implementation. This ensures the model
+     runs on any GPU/CPU without serialization version errors.
+   * Visualization: Integrated real-time bounding box and Target ID drawing directly into the C++ vision thread.
+   * Web Streaming: Created MJPEGStreamer using cpp-httplib to serve dual-camera feeds (/static_cam and /top_cam) over HTTP.
+
+
+  Phase 5: Control Loop & Orchestration (DONE)
+   * PID Brain: Migrated the PID logic to PIDController.cpp, handling error accumulation and gains lookup.
+   * System Orchestrator: Developed RakshakSystem, which manages the lifecycle of three concurrent threads:
+       1. Vision Thread: Detection + Streaming.
+       2. Control Thread: Target tracking + PID Motor command calculation.
+       3. Health Thread: Motor feedback and system monitoring.
+
+
+  Phase 6: Assembly & Validation (ONGOING)
+   * Integrated Entry Point: Updated main.cpp with signal handling (Ctrl+C) and a centralized system start.
+   * Startup Gating: Implemented "Health Gating" to distinguish between Required (Inference/Vision) and Optional (Hardware) components.
+   * Resiliency: Implemented Camera Fallback logic; if the tracking camera is absent, the system automatically replicates the wide-angle view to
+     maintain logic flow.
+
+  ---
+
+
+  Next Steps:
+  We are now in the validation stage of the C++ code. Once you provide the yolo11n.onnx file, we can confirm real detections. After that, we can
+  finalize the Phase 3 Moteus CAN-bus integration.
