@@ -2550,25 +2550,7 @@ CMakeFiles/Rakshak_cpp.dir/src/RakshakSystem.cpp.o: ../src/RakshakSystem.cpp \
   ../include/ZoomController.h \
   ../include/MotorController.h \
   ../include/PIDController.h \
-  ../include/YoloEngine.h \
-  /usr/include/x86_64-linux-gnu/NvInfer.h \
-  /usr/include/x86_64-linux-gnu/NvInferLegacyDims.h \
-  /usr/include/x86_64-linux-gnu/NvInferRuntimeBase.h \
-  /usr/include/x86_64-linux-gnu/NvInferVersion.h \
-  /usr/local/cuda-12.8/include/cuda_runtime_api.h \
-  /usr/local/cuda-12.8/include/crt/host_defines.h \
-  /usr/local/cuda-12.8/include/builtin_types.h \
-  /usr/local/cuda-12.8/include/device_types.h \
-  /usr/local/cuda-12.8/include/driver_types.h \
-  /usr/local/cuda-12.8/include/vector_types.h \
-  /usr/local/cuda-12.8/include/surface_types.h \
-  /usr/local/cuda-12.8/include/texture_types.h \
-  /usr/local/cuda-12.8/include/cuda_device_runtime_api.h \
-  /usr/include/x86_64-linux-gnu/NvInferRuntime.h \
-  /usr/include/x86_64-linux-gnu/NvInferImpl.h \
-  /usr/include/x86_64-linux-gnu/NvInferRuntimeCommon.h \
-  /usr/include/x86_64-linux-gnu/NvInferPluginBase.h \
-  /usr/include/x86_64-linux-gnu/NvInferRuntimePlugin.h
+  ../include/YoloEngine.h
 
 CMakeFiles/Rakshak_cpp.dir/src/SerialPort.cpp.o: ../src/SerialPort.cpp \
   /usr/include/stdc-predef.h \
@@ -3679,24 +3661,6 @@ CMakeFiles/Rakshak_cpp.dir/src/YoloEngine.cpp.o: ../src/YoloEngine.cpp \
   /usr/local/include/opencv4/opencv2/video.hpp \
   /usr/local/include/opencv4/opencv2/video/tracking.hpp \
   /usr/local/include/opencv4/opencv2/video/background_segm.hpp \
-  /usr/include/x86_64-linux-gnu/NvInfer.h \
-  /usr/include/x86_64-linux-gnu/NvInferLegacyDims.h \
-  /usr/include/x86_64-linux-gnu/NvInferRuntimeBase.h \
-  /usr/include/x86_64-linux-gnu/NvInferVersion.h \
-  /usr/local/cuda-12.8/include/cuda_runtime_api.h \
-  /usr/local/cuda-12.8/include/crt/host_defines.h \
-  /usr/local/cuda-12.8/include/builtin_types.h \
-  /usr/local/cuda-12.8/include/device_types.h \
-  /usr/local/cuda-12.8/include/driver_types.h \
-  /usr/local/cuda-12.8/include/vector_types.h \
-  /usr/local/cuda-12.8/include/surface_types.h \
-  /usr/local/cuda-12.8/include/texture_types.h \
-  /usr/local/cuda-12.8/include/cuda_device_runtime_api.h \
-  /usr/include/x86_64-linux-gnu/NvInferRuntime.h \
-  /usr/include/x86_64-linux-gnu/NvInferImpl.h \
-  /usr/include/x86_64-linux-gnu/NvInferRuntimeCommon.h \
-  /usr/include/x86_64-linux-gnu/NvInferPluginBase.h \
-  /usr/include/x86_64-linux-gnu/NvInferRuntimePlugin.h \
   ../include/SharedState.h \
   /usr/include/c++/11/atomic \
   /usr/include/c++/11/shared_mutex \
@@ -4587,48 +4551,10 @@ CMakeFiles/Rakshak_cpp.dir/src/main.cpp.o: ../src/main.cpp \
   ../include/ZoomController.h \
   ../include/MotorController.h \
   ../include/PIDController.h \
-  ../include/YoloEngine.h \
-  /usr/include/x86_64-linux-gnu/NvInfer.h \
-  /usr/include/x86_64-linux-gnu/NvInferLegacyDims.h \
-  /usr/include/x86_64-linux-gnu/NvInferRuntimeBase.h \
-  /usr/include/x86_64-linux-gnu/NvInferVersion.h \
-  /usr/local/cuda-12.8/include/cuda_runtime_api.h \
-  /usr/local/cuda-12.8/include/crt/host_defines.h \
-  /usr/local/cuda-12.8/include/builtin_types.h \
-  /usr/local/cuda-12.8/include/device_types.h \
-  /usr/local/cuda-12.8/include/driver_types.h \
-  /usr/local/cuda-12.8/include/vector_types.h \
-  /usr/local/cuda-12.8/include/surface_types.h \
-  /usr/local/cuda-12.8/include/texture_types.h \
-  /usr/local/cuda-12.8/include/cuda_device_runtime_api.h \
-  /usr/include/x86_64-linux-gnu/NvInferRuntime.h \
-  /usr/include/x86_64-linux-gnu/NvInferImpl.h \
-  /usr/include/x86_64-linux-gnu/NvInferRuntimeCommon.h \
-  /usr/include/x86_64-linux-gnu/NvInferPluginBase.h \
-  /usr/include/x86_64-linux-gnu/NvInferRuntimePlugin.h
+  ../include/YoloEngine.h
 
 
 ../src/SharedState.cpp:
-
-/usr/include/x86_64-linux-gnu/NvInferRuntimePlugin.h:
-
-/usr/include/x86_64-linux-gnu/NvInferPluginBase.h:
-
-/usr/include/x86_64-linux-gnu/NvInferRuntimeCommon.h:
-
-/usr/local/cuda-12.8/include/cuda_device_runtime_api.h:
-
-/usr/local/cuda-12.8/include/texture_types.h:
-
-/usr/local/cuda-12.8/include/vector_types.h:
-
-/usr/local/cuda-12.8/include/driver_types.h:
-
-/usr/local/cuda-12.8/include/builtin_types.h:
-
-/usr/local/cuda-12.8/include/crt/host_defines.h:
-
-/usr/local/cuda-12.8/include/cuda_runtime_api.h:
 
 ../include/YoloEngine.h:
 
@@ -4755,8 +4681,6 @@ CMakeFiles/Rakshak_cpp.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/sigstksz.h:
 
 /usr/include/c++/11/bits/shared_ptr_atomic.h:
-
-/usr/include/x86_64-linux-gnu/NvInfer.h:
 
 /usr/include/c++/11/queue:
 
@@ -4976,8 +4900,6 @@ CMakeFiles/Rakshak_cpp.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/stringfwd.h:
 
-/usr/include/x86_64-linux-gnu/NvInferLegacyDims.h:
-
 /usr/include/c++/11/bits/memoryfwd.h:
 
 /usr/include/x86_64-linux-gnu/sys/socket.h:
@@ -5001,8 +4923,6 @@ CMakeFiles/Rakshak_cpp.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/backward/auto_ptr.h:
 
 ../include/MJPEGStreamer.h:
-
-/usr/include/x86_64-linux-gnu/NvInferRuntime.h:
 
 /usr/include/c++/11/cctype:
 
@@ -5262,8 +5182,6 @@ CMakeFiles/Rakshak_cpp.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
-/usr/include/x86_64-linux-gnu/NvInferVersion.h:
-
 /usr/include/c++/11/bits/stl_deque.h:
 
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
@@ -5346,8 +5264,6 @@ CMakeFiles/Rakshak_cpp.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
-/usr/include/x86_64-linux-gnu/NvInferImpl.h:
-
 /usr/local/include/opencv4/opencv2/core/bufferpool.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/termios-c_cc.h:
@@ -5367,8 +5283,6 @@ CMakeFiles/Rakshak_cpp.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/local/include/opencv4/opencv2/core/saturate.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
-
-/usr/local/cuda-12.8/include/device_types.h:
 
 /usr/include/c++/11/ext/atomicity.h:
 
@@ -5614,8 +5528,6 @@ CMakeFiles/Rakshak_cpp.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/local/include/opencv4/opencv2/flann/kdtree_index.h:
 
-/usr/local/cuda-12.8/include/surface_types.h:
-
 /usr/local/include/opencv4/opencv2/flann/dynamic_bitset.h:
 
 /usr/include/x86_64-linux-gnu/bits/sigcontext.h:
@@ -5749,8 +5661,6 @@ CMakeFiles/Rakshak_cpp.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h:
 
 /usr/include/c++/11/list:
-
-/usr/include/x86_64-linux-gnu/NvInferRuntimeBase.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
 

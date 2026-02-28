@@ -67,6 +67,19 @@ void RakshakSystem::vision_thread_func() {
         if (!frame.empty()) {
             // Run Detection
             std::vector<DetectedObject> detections = yolo->detect(frame);
+            
+            // Draw Bounding Boxes
+            for (const auto& obj : detections) {
+                int x1 = static_cast<int>(obj.fx - obj.w / 2);
+                int y1 = static_cast<int>(obj.fy - obj.h / 2);
+                
+                cv::Scalar color = (obj.id == state.target_id.load()) ? cv::Scalar(0, 0, 255) : cv::Scalar(0, 255, 0);
+                cv::rectangle(frame, cv::Rect(x1, y1, static_cast<int>(obj.w), static_cast<int>(obj.h)), color, 2);
+                
+                std::string label = "ID: " + std::to_string(obj.id);
+                cv::putText(frame, label, cv::Point(x1, y1 - 10), cv::FONT_HERSHEY_SIMPLEX, 0.6, color, 2);
+            }
+
             if (!detections.empty()) {
                 std::cout << "[VISION] Found " << detections.size() << " targets." << std::endl;
             }
