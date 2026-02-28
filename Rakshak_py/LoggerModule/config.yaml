@@ -1,0 +1,13 @@
+storage:
+  threshold_percent: 80
+  max_directory_size_mb: 1000
+  max_dir_warning_threshold: auto
+logger:
+  directory: External_logs!
+  max_file_size_mb: 100
+  queue_size: 100000
+  default_file_type: csv
+  default_compress: false
+  encoder: false
+xlsxconfig:
+  rows: 250000

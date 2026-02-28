@@ -1,0 +1,18 @@
+=====> files
+
+1. main.py
+2. motor_controller.py   (newly added for modularity)
+3. Globals.py
+4. log_util.py
+5. modular_sensor_reader.py -> used for sensor logging will be changed in future
+6. MQ_Base.py
+7. share_frame.py
+8. solenoid_controller.py
+9. stream_server.py
+10. utils.py
+11. zoom_controller.py
+12. data_manager.py (used to create in memory all pid fov and depth based height data and updations in json as well)
+13. op_mode.py
+14. shared_state.py
+15. camera_reader.py
+16. message_controller.py

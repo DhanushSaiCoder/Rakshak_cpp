@@ -1,0 +1,18 @@
+{
+  "yaw_value": 1.0,
+  "pitch_value": -1.0,
+  "short_burst_value": 0.5,
+  "long_burst_value": 1.0,
+  "pid_factor_value": 3.0,
+  "depth_factor_value": 1.0,
+  "auto_accuracy_value": 5,
+  "auto_target_hold_time": 0.20000000298023224,
+  "image_stabilization": false,
+  "auto_focus": true,
+  "pid_enable": true,
+  "zoom_level": 1,
+  "digital_zoom_enabled": false,
+  "top_model": "models/yolo_11n_5k_rs.pt",
+  "static_model": "models/yolo_11n_5k_rs.pt",
+  "op_mode": 1
+}

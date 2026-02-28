@@ -1,0 +1,13 @@
+Ecosystem & Tooling Selection
+  Before writing code, we need to map the Python libraries to their C++ equivalents and set up the build system.
+
+
+   * Build System: CMake (Industry standard for C++).
+   * Computer Vision: OpenCV C++ (cv::VideoCapture, cv::Mat).
+   * Inference (YOLOv11): TensorRT (NVIDIA) or ONNXRuntime. We will need to export your .pt models to .onnx or .engine formats.
+   * Object Tracking: C++ implementation of ByteTrack (readily available on GitHub).
+   * Messaging (RabbitMQ): amqp-cpp or SimpleAmqpClient.
+   * Web Streaming (MJPEG): cpp-httplib (lightweight header-only HTTP server).
+   * Motor Control (Moteus): Moteus provides a C++ API (moteus-cpp or direct SocketCAN wrappers).
+   * Hardware/Serial Comm: Boost.Asio or a lightweight library like serialib for Arduino (Trigger, Sensors, Zoom).
+   * Configuration/State: nlohmann/json for JSON parsing (for runtime_state.json, fov_data.json, etc.).

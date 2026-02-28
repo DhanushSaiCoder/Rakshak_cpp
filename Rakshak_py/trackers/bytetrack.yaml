@@ -1,0 +1,8 @@
+tracker_type: bytetrack
+track_high_thresh: 0.5        # Only high-confidence detections are used first
+track_low_thresh: 0.3         # Weaker fallback for association, but not too loose
+new_track_thresh: 0.6         # Make it harder to create new tracks — avoids ID jumps
+track_buffer: 10              # Keep lost tracks for up to 3 seconds (for reappearance)
+match_thresh: 0.85            # Slightly tighter to preserve original IDs
+fuse_score: True
+
