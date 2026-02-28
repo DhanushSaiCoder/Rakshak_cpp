@@ -8,11 +8,9 @@ CameraReader::~CameraReader() {
     stop();
 }
 
-void CameraReader::start() {
-    if (running) return;
+bool CameraReader::start() {
+    if (running) return true;
     
-    // Open camera
-    // If source is a number, convert to int
     try {
         int idx = std::stoi(source);
         cap.open(idx);
@@ -21,14 +19,14 @@ void CameraReader::start() {
     }
 
     if (!cap.isOpened()) {
-        std::cerr << "[ERROR] Failed to open camera: " << camera_name << " source: " << source << std::endl;
-        return;
+        return false;
     }
 
-    cap.set(cv::CAP_PROP_BUFFERSIZE, 1); // Minimize latency
+    cap.set(cv::CAP_PROP_BUFFERSIZE, 1);
     
     running = true;
     worker_thread = std::thread(&CameraReader::capture_loop, this);
+    return true;
 }
 
 void CameraReader::stop() {

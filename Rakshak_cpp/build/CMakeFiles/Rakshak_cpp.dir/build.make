@@ -308,6 +308,10 @@ Rakshak_cpp: /usr/local/lib/libopencv_wechat_qrcode.so.4.12.0
 Rakshak_cpp: /usr/local/lib/libopencv_xfeatures2d.so.4.12.0
 Rakshak_cpp: /usr/local/lib/libopencv_xobjdetect.so.4.12.0
 Rakshak_cpp: /usr/local/lib/libopencv_xphoto.so.4.12.0
+Rakshak_cpp: /usr/local/cuda-12.8/lib64/libcudart_static.a
+Rakshak_cpp: /usr/lib/x86_64-linux-gnu/librt.a
+Rakshak_cpp: /usr/lib/x86_64-linux-gnu/libnvinfer.so
+Rakshak_cpp: /usr/lib/x86_64-linux-gnu/libnvonnxparser.so
 Rakshak_cpp: /usr/local/lib/libopencv_shape.so.4.12.0
 Rakshak_cpp: /usr/local/lib/libopencv_highgui.so.4.12.0
 Rakshak_cpp: /usr/local/lib/libopencv_datasets.so.4.12.0

@@ -11,7 +11,7 @@ public:
     CameraReader(const std::string& video_source, const std::string& name);
     ~CameraReader();
 
-    void start();
+    bool start();
     void stop();
     
     cv::Mat get_latest_frame();

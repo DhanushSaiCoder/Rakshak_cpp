@@ -11,3 +11,44 @@ Ecosystem & Tooling Selection
    * Motor Control (Moteus): Moteus provides a C++ API (moteus-cpp or direct SocketCAN wrappers).
    * Hardware/Serial Comm: Boost.Asio or a lightweight library like serialib for Arduino (Trigger, Sensors, Zoom).
    * Configuration/State: nlohmann/json for JSON parsing (for runtime_state.json, fov_data.json, etc.).
+
+
+Phase 1: Ecosystem & Tooling Selection (DONE)
+   * Build System: CMake setup.
+   * Libraries: Integrated OpenCV, Threads, and established nlohmann/json usage.
+   * Structure: Created include/ and src/ directories.
+
+
+  Phase 2: Foundation & State Management (DONE)
+   * Globals: Migrated Globals.py to Globals.h.
+   * OpModes: Migrated Python enums to C++ enum class.
+   * Shared State: Implemented a thread-safe SharedState using std::atomic and std::shared_mutex to replace Python's multiprocessing.Manager.
+   * Data Manager: Implemented DataManager to load JSON fov/pid/depth data and a MathUtils helper for linear interpolation.
+
+
+  Phase 3: Hardware & Messaging Interfaces (ONGOING)
+   * Serial Wrappers: Created SerialPort, TriggerController (Solenoid/Laser), and ZoomController (VISCA).
+   * Pending:
+       * Motor Integration: Moving from mock MotorController to real moteus-cpp SocketCAN implementation.
+       * Messaging: Implementing RabbitMQ interface (likely using amqp-cpp or a proxy).
+
+
+  Phase 4: Vision & Inference Pipeline (ONGOING)
+   * Capture: Implemented CameraReader using high-performance C++ threads.
+   * Streaming: Implemented a high-speed MJPEGStreamer using cpp-httplib.
+   * Pending:
+       * TensorRT Inference: Replacing the YoloEngine stub with actual TensorRT engine loading and GPU pre-processing.
+       * Tracking: Implementing the C++ ByteTrack logic.
+
+
+  Phase 5: The Control Loop (ONGOING)
+   * PID Logic: Implemented PIDController class with command calculation.
+   * System Orchestration: Created RakshakSystem to manage the lifecycle of all threads.
+   * Pending:
+       * Target locking logic, firing timers, and mode-switching refinements within the RakshakSystem control thread.
+
+
+  Phase 6: Final Assembly & Validation (PENDING)
+   * Creating the final high-performance executable.
+   * Hardware-in-the-loop testing (CAN bus, Serial latency).
+   * Performance benchmarking (FPS vs. Latency).

@@ -18,7 +18,7 @@ public:
     RakshakSystem();
     ~RakshakSystem();
 
-    void start();
+    bool start();
     void stop();
 
 private:

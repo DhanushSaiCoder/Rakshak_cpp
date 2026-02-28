@@ -7,9 +7,16 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Find Dependencies
 find_package(OpenCV REQUIRED)
 find_package(Threads REQUIRED)
+find_package(CUDA REQUIRED)
+
+# TensorRT (NVIDIA)
+set(TENSORRT_INCLUDE_DIR /usr/include/x86_64-linux-gnu)
+set(TENSORRT_LIB_DIR /usr/lib/x86_64-linux-gnu)
+find_library(NVINFER_LIB nvinfer PATHS ${TENSORRT_LIB_DIR})
+find_library(NVONNXPARSER_LIB nvonnxparser PATHS ${TENSORRT_LIB_DIR})
 
 # Include Directories
-include_directories(include)
+include_directories(include ${CUDA_INCLUDE_DIRS} ${TENSORRT_INCLUDE_DIR})
 
 # Source Files
 set(SOURCES
@@ -33,5 +40,8 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 # Link Libraries
 target_link_libraries(${PROJECT_NAME}
     ${OpenCV_LIBS}
+    ${CUDA_LIBRARIES}
+    ${NVINFER_LIB}
+    ${NVONNXPARSER_LIB}
     Threads::Threads
 )

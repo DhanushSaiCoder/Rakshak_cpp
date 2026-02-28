@@ -20,9 +20,13 @@ int main() {
 
     try {
         system_ptr = std::make_unique<RakshakSystem>();
-        system_ptr->start();
+        
+        if (system_ptr->start()) {
+            std::cout << "[SUCCESS] Rakshak System is running fully." << std::endl;
+        } else {
+            std::cerr << "[WARNING] Rakshak System is running in DEGRADED mode (Some required components failed)." << std::endl;
+        }
 
-        std::cout << "[SUCCESS] Rakshak System is running." << std::endl;
         std::cout << "Press Ctrl+C to stop." << std::endl;
 
         // Keep main thread alive
@@ -31,7 +35,7 @@ int main() {
         }
 
     } catch (const std::exception& e) {
-        std::cerr << "[CRITICAL] System crash: " << e.what() << std::endl;
+        std::cerr << "[CRITICAL] System crash during initialization: " << e.what() << std::endl;
         return 1;
     }
 

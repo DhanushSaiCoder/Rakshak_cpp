@@ -369,6 +369,12 @@ CUDA_nvToolsExt_LIBRARY:FILEPATH=/usr/local/cuda-12.8/lib64/libnvToolsExt.so
 //Path to a library.
 CUDA_rt_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.a
 
+//Path to a library.
+NVINFER_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libnvinfer.so
+
+//Path to a library.
+NVONNXPARSER_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libnvonnxparser.so
+
 //The directory containing a CMake configuration file for OpenCV.
 OpenCV_DIR:PATH=/usr/local/lib/cmake/opencv4
 
@@ -631,7 +637,7 @@ CUDA_parse_cubin:INTERNAL=/usr/share/cmake-3.22/Modules/FindCUDA/parse_cubin.cma
 //Location of run_nvcc.cmake
 CUDA_run_nvcc:INTERNAL=/usr/share/cmake-3.22/Modules/FindCUDA/run_nvcc.cmake
 //Details about finding CUDA
-FIND_PACKAGE_MESSAGE_DETAILS_CUDA:INTERNAL=[/usr/local/cuda-12.8][/usr/local/cuda-12.8/bin/nvcc][/usr/local/cuda-12.8/include][/usr/local/cuda-12.8/lib64/libcudart_static.a][v12.8(12.8)]
+FIND_PACKAGE_MESSAGE_DETAILS_CUDA:INTERNAL=[/usr/local/cuda-12.8][/usr/local/cuda-12.8/bin/nvcc][/usr/local/cuda-12.8/include][/usr/local/cuda-12.8/lib64/libcudart_static.a][v12.8()]
 //Details about finding OpenCV
 FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr/local][v4.12.0()]
 //Details about finding Threads

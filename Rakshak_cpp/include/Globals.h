@@ -42,9 +42,9 @@ namespace Globals {
 
     // Model paths
     const std::string MODELS_DIR = "models";
-    const std::string DEFAULT_MODEL = "models/yolo11n.engine"; // Prefer engine for C++/TensorRT
-    const std::string FACE_MODEL = "models/yolov11n-face.engine";
-    const std::string FIG_MODEL = "models/fig11_best_11n_12k_without_params.engine";
+    const std::string DEFAULT_MODEL = "models/yolo11n.onnx"; 
+    const std::string FACE_MODEL = "models/yolov11n-face.onnx";
+    const std::string FIG_MODEL = "models/fig11_best_11n_12k_without_params.onnx";
 
     // Sensor data variables
     const std::string SYNC_WORD = "START";

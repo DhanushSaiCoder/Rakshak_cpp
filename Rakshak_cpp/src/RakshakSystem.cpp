@@ -18,18 +18,36 @@ RakshakSystem::~RakshakSystem() {
     stop();
 }
 
-void RakshakSystem::start() {
-    if (running) return;
-    running = true;
+bool RakshakSystem::start() {
+    if (running) return true;
+    
+    bool static_ready = static_cam->start();
+    if (!static_ready) {
+        std::cerr << "[SYSTEM][FATAL] Static Camera (Required) failed to start." << std::endl;
+    }
 
-    static_cam->start();
-    top_cam->start();
+    bool top_ready = top_cam->start();
+    if (!top_ready) {
+        std::cout << "[SYSTEM][WARN] Top Camera (Optional) not found. Using fallback." << std::endl;
+    }
+
     streamer->start();
-    yolo->load_model();
+    
+    bool yolo_ready = yolo->load_model();
+    if (!yolo_ready) {
+        std::cerr << "[SYSTEM][FATAL] YOLO Inference (Required) failed to initialize." << std::endl;
+    }
 
+    if (!static_ready || !yolo_ready) {
+        return false;
+    }
+
+    running = true;
     vision_thread = std::thread(&RakshakSystem::vision_thread_func, this);
     control_thread = std::thread(&RakshakSystem::control_thread_func, this);
     health_thread = std::thread(&RakshakSystem::health_thread_func, this);
+
+    return true;
 }
 
 void RakshakSystem::stop() {
@@ -49,11 +67,28 @@ void RakshakSystem::vision_thread_func() {
         if (!frame.empty()) {
             // Run Detection
             std::vector<DetectedObject> detections = yolo->detect(frame);
+            if (!detections.empty()) {
+                std::cout << "[VISION] Found " << detections.size() << " targets." << std::endl;
+            }
             state.set_detections(detections);
             
             // Feed streamer
             streamer->set_frame("static_cam", frame);
+            
+            // Fallback for TopCam view in streamer if camera index 1 is missing
+            if (!top_cam->is_running()) {
+                streamer->set_frame("top_cam", frame);
+            }
         }
+
+        // Also handle real TopCam frames if running
+        if (top_cam->is_running()) {
+            cv::Mat top_frame = top_cam->get_latest_frame();
+            if (!top_frame.empty()) {
+                streamer->set_frame("top_cam", top_frame);
+            }
+        }
+
         std::this_thread::sleep_for(std::chrono::milliseconds(10));
     }
 }
@@ -71,14 +106,12 @@ void RakshakSystem::control_thread_func() {
         auto detections = state.get_detections();
 
         if (mode == OpMode::SEMI_AUTO && !detections.empty()) {
-            // Logic migrated from main.py semi-auto block
-            DetectedObject target = detections[0]; // Simplification: track first object
+            DetectedObject target = detections[0];
             
             int zoom = state.zoom_level.load();
             ZoomFOV fov = data_manager.get_static_fov(zoom);
             
-            // Calculate error (simplification)
-            double error_x = target.fx - (1920 / 2); // Assuming 1920 width
+            double error_x = target.fx - (1920 / 2);
             double error_y = target.fy - (1080 / 2);
 
             if (!state.static_position_sent) {
@@ -89,7 +122,6 @@ void RakshakSystem::control_thread_func() {
                 motors->set_position(y_cmd, p_cmd, Globals::VELOCITY_LIMIT, Globals::ACCELERATION_LIMIT);
                 state.static_position_sent = true;
             } else {
-                // Run PID fine tracking
                 PIDResult res = pid->calculate(error_x, error_y, dt, prev_Ix, prev_Iy, zoom, data_manager);
                 prev_Ix = res.yaw_Ix;
                 prev_Iy = res.pitch_Iy;
@@ -106,12 +138,8 @@ void RakshakSystem::control_thread_func() {
 
 void RakshakSystem::health_thread_func() {
     while (running) {
-        // Publish health data (migrated from publish_health in motor_controller.py)
         MotorState yaw = motors->get_yaw_state();
         MotorState pitch = motors->get_pitch_state();
-        
-        // In real app, publish to RabbitMQ here
-        
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
 }

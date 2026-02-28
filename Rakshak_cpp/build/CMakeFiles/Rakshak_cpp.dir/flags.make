@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/include -isystem /usr/local/include/opencv4
+CXX_INCLUDES = -I/home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/include -I/usr/local/cuda-12.8/include -isystem /usr/local/include/opencv4
 
 CXX_FLAGS = -std=gnu++17
 
