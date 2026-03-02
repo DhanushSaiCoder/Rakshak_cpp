@@ -52,3 +52,10 @@ Phase 1: Ecosystem & Tooling Selection (DONE)
    * Creating the final high-performance executable.
    * Hardware-in-the-loop testing (CAN bus, Serial latency).
    * Performance benchmarking (FPS vs. Latency).
+
+   Next Steps for Deployment:
+   1. Configure CAN: Ensure your CAN interface is up:
+      sudo ip link set can0 up type can bitrate 1000000 dbitrate 8000000 fd on
+   2. Verify Models: Ensure models/yolo11n.onnx exists in the Rakshak_cpp root.
+   3. Run: Execute the system from the project root:
+      cd Rakshak_cpp && ./build/Rakshak_cpp
