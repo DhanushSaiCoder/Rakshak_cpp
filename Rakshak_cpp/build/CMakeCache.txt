@@ -378,6 +378,9 @@ NVONNXPARSER_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libnvonnxparser.so
 //The directory containing a CMake configuration file for OpenCV.
 OpenCV_DIR:PATH=/usr/local/lib/cmake/opencv4
 
+//Path to a library.
+RABBITMQ_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/librabbitmq.so
+
 //Value Computed by CMake
 Rakshak_cpp_BINARY_DIR:STATIC=/home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/build
 

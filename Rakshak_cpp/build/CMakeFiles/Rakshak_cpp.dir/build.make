@@ -209,10 +209,52 @@ CMakeFiles/Rakshak_cpp.dir/src/YoloEngine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rakshak_cpp.dir/src/YoloEngine.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/src/YoloEngine.cpp -o CMakeFiles/Rakshak_cpp.dir/src/YoloEngine.cpp.s
 
+CMakeFiles/Rakshak_cpp.dir/src/MoteusDriver.cpp.o: CMakeFiles/Rakshak_cpp.dir/flags.make
+CMakeFiles/Rakshak_cpp.dir/src/MoteusDriver.cpp.o: ../src/MoteusDriver.cpp
+CMakeFiles/Rakshak_cpp.dir/src/MoteusDriver.cpp.o: CMakeFiles/Rakshak_cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Rakshak_cpp.dir/src/MoteusDriver.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rakshak_cpp.dir/src/MoteusDriver.cpp.o -MF CMakeFiles/Rakshak_cpp.dir/src/MoteusDriver.cpp.o.d -o CMakeFiles/Rakshak_cpp.dir/src/MoteusDriver.cpp.o -c /home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/src/MoteusDriver.cpp
+
+CMakeFiles/Rakshak_cpp.dir/src/MoteusDriver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rakshak_cpp.dir/src/MoteusDriver.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/src/MoteusDriver.cpp > CMakeFiles/Rakshak_cpp.dir/src/MoteusDriver.cpp.i
+
+CMakeFiles/Rakshak_cpp.dir/src/MoteusDriver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rakshak_cpp.dir/src/MoteusDriver.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/src/MoteusDriver.cpp -o CMakeFiles/Rakshak_cpp.dir/src/MoteusDriver.cpp.s
+
+CMakeFiles/Rakshak_cpp.dir/src/MessageBridge.cpp.o: CMakeFiles/Rakshak_cpp.dir/flags.make
+CMakeFiles/Rakshak_cpp.dir/src/MessageBridge.cpp.o: ../src/MessageBridge.cpp
+CMakeFiles/Rakshak_cpp.dir/src/MessageBridge.cpp.o: CMakeFiles/Rakshak_cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Rakshak_cpp.dir/src/MessageBridge.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rakshak_cpp.dir/src/MessageBridge.cpp.o -MF CMakeFiles/Rakshak_cpp.dir/src/MessageBridge.cpp.o.d -o CMakeFiles/Rakshak_cpp.dir/src/MessageBridge.cpp.o -c /home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/src/MessageBridge.cpp
+
+CMakeFiles/Rakshak_cpp.dir/src/MessageBridge.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rakshak_cpp.dir/src/MessageBridge.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/src/MessageBridge.cpp > CMakeFiles/Rakshak_cpp.dir/src/MessageBridge.cpp.i
+
+CMakeFiles/Rakshak_cpp.dir/src/MessageBridge.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rakshak_cpp.dir/src/MessageBridge.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/src/MessageBridge.cpp -o CMakeFiles/Rakshak_cpp.dir/src/MessageBridge.cpp.s
+
+CMakeFiles/Rakshak_cpp.dir/src/SensorReader.cpp.o: CMakeFiles/Rakshak_cpp.dir/flags.make
+CMakeFiles/Rakshak_cpp.dir/src/SensorReader.cpp.o: ../src/SensorReader.cpp
+CMakeFiles/Rakshak_cpp.dir/src/SensorReader.cpp.o: CMakeFiles/Rakshak_cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Rakshak_cpp.dir/src/SensorReader.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rakshak_cpp.dir/src/SensorReader.cpp.o -MF CMakeFiles/Rakshak_cpp.dir/src/SensorReader.cpp.o.d -o CMakeFiles/Rakshak_cpp.dir/src/SensorReader.cpp.o -c /home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/src/SensorReader.cpp
+
+CMakeFiles/Rakshak_cpp.dir/src/SensorReader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rakshak_cpp.dir/src/SensorReader.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/src/SensorReader.cpp > CMakeFiles/Rakshak_cpp.dir/src/SensorReader.cpp.i
+
+CMakeFiles/Rakshak_cpp.dir/src/SensorReader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rakshak_cpp.dir/src/SensorReader.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/src/SensorReader.cpp -o CMakeFiles/Rakshak_cpp.dir/src/SensorReader.cpp.s
+
 CMakeFiles/Rakshak_cpp.dir/src/RakshakSystem.cpp.o: CMakeFiles/Rakshak_cpp.dir/flags.make
 CMakeFiles/Rakshak_cpp.dir/src/RakshakSystem.cpp.o: ../src/RakshakSystem.cpp
 CMakeFiles/Rakshak_cpp.dir/src/RakshakSystem.cpp.o: CMakeFiles/Rakshak_cpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Rakshak_cpp.dir/src/RakshakSystem.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Rakshak_cpp.dir/src/RakshakSystem.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rakshak_cpp.dir/src/RakshakSystem.cpp.o -MF CMakeFiles/Rakshak_cpp.dir/src/RakshakSystem.cpp.o.d -o CMakeFiles/Rakshak_cpp.dir/src/RakshakSystem.cpp.o -c /home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/src/RakshakSystem.cpp
 
 CMakeFiles/Rakshak_cpp.dir/src/RakshakSystem.cpp.i: cmake_force
@@ -226,7 +268,7 @@ CMakeFiles/Rakshak_cpp.dir/src/RakshakSystem.cpp.s: cmake_force
 CMakeFiles/Rakshak_cpp.dir/src/main.cpp.o: CMakeFiles/Rakshak_cpp.dir/flags.make
 CMakeFiles/Rakshak_cpp.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/Rakshak_cpp.dir/src/main.cpp.o: CMakeFiles/Rakshak_cpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Rakshak_cpp.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Rakshak_cpp.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rakshak_cpp.dir/src/main.cpp.o -MF CMakeFiles/Rakshak_cpp.dir/src/main.cpp.o.d -o CMakeFiles/Rakshak_cpp.dir/src/main.cpp.o -c /home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/src/main.cpp
 
 CMakeFiles/Rakshak_cpp.dir/src/main.cpp.i: cmake_force
@@ -249,6 +291,9 @@ Rakshak_cpp_OBJECTS = \
 "CMakeFiles/Rakshak_cpp.dir/src/PIDController.cpp.o" \
 "CMakeFiles/Rakshak_cpp.dir/src/MotorController.cpp.o" \
 "CMakeFiles/Rakshak_cpp.dir/src/YoloEngine.cpp.o" \
+"CMakeFiles/Rakshak_cpp.dir/src/MoteusDriver.cpp.o" \
+"CMakeFiles/Rakshak_cpp.dir/src/MessageBridge.cpp.o" \
+"CMakeFiles/Rakshak_cpp.dir/src/SensorReader.cpp.o" \
 "CMakeFiles/Rakshak_cpp.dir/src/RakshakSystem.cpp.o" \
 "CMakeFiles/Rakshak_cpp.dir/src/main.cpp.o"
 
@@ -265,6 +310,9 @@ Rakshak_cpp: CMakeFiles/Rakshak_cpp.dir/src/MJPEGStreamer.cpp.o
 Rakshak_cpp: CMakeFiles/Rakshak_cpp.dir/src/PIDController.cpp.o
 Rakshak_cpp: CMakeFiles/Rakshak_cpp.dir/src/MotorController.cpp.o
 Rakshak_cpp: CMakeFiles/Rakshak_cpp.dir/src/YoloEngine.cpp.o
+Rakshak_cpp: CMakeFiles/Rakshak_cpp.dir/src/MoteusDriver.cpp.o
+Rakshak_cpp: CMakeFiles/Rakshak_cpp.dir/src/MessageBridge.cpp.o
+Rakshak_cpp: CMakeFiles/Rakshak_cpp.dir/src/SensorReader.cpp.o
 Rakshak_cpp: CMakeFiles/Rakshak_cpp.dir/src/RakshakSystem.cpp.o
 Rakshak_cpp: CMakeFiles/Rakshak_cpp.dir/src/main.cpp.o
 Rakshak_cpp: CMakeFiles/Rakshak_cpp.dir/build.make
@@ -312,6 +360,7 @@ Rakshak_cpp: /usr/local/cuda-12.8/lib64/libcudart_static.a
 Rakshak_cpp: /usr/lib/x86_64-linux-gnu/librt.a
 Rakshak_cpp: /usr/lib/x86_64-linux-gnu/libnvinfer.so
 Rakshak_cpp: /usr/lib/x86_64-linux-gnu/libnvonnxparser.so
+Rakshak_cpp: /usr/lib/x86_64-linux-gnu/librabbitmq.so
 Rakshak_cpp: /usr/local/lib/libopencv_shape.so.4.12.0
 Rakshak_cpp: /usr/local/lib/libopencv_highgui.so.4.12.0
 Rakshak_cpp: /usr/local/lib/libopencv_datasets.so.4.12.0
@@ -341,7 +390,7 @@ Rakshak_cpp: /usr/local/lib/libopencv_cudaarithm.so.4.12.0
 Rakshak_cpp: /usr/local/lib/libopencv_core.so.4.12.0
 Rakshak_cpp: /usr/local/lib/libopencv_cudev.so.4.12.0
 Rakshak_cpp: CMakeFiles/Rakshak_cpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable Rakshak_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable Rakshak_cpp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Rakshak_cpp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

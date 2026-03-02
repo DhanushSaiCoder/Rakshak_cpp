@@ -9,9 +9,12 @@
 #include "MotorController.h"
 #include "PIDController.h"
 #include "YoloEngine.h"
+#include "MessageBridge.h"
+#include "SensorReader.h"
 
 #include <thread>
 #include <atomic>
+#include <memory>
 
 class RakshakSystem {
 public:
@@ -37,6 +40,8 @@ private:
     std::unique_ptr<MotorController> motors;
     std::unique_ptr<PIDController> pid;
     std::unique_ptr<YoloEngine> yolo;
+    std::unique_ptr<MessageBridge> mq_bridge;
+    std::unique_ptr<SensorReader> sensors;
 
     std::thread vision_thread;
     std::thread control_thread;

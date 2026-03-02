@@ -1,22 +1,17 @@
 #pragma once
 
 #include "SharedState.h"
+#include "MoteusDriver.h"
 #include <string>
 #include <memory>
-
-struct MotorState {
-    double position;
-    double velocity;
-    double torque;
-    double voltage;
-    double temperature;
-    int fault;
-};
+#include <thread>
+#include <atomic>
+#include <mutex>
 
 class MotorController {
 public:
     MotorController(SharedState& shared_state);
-    ~MotorController() = default;
+    ~MotorController();
 
     // Command methods
     bool stop_motors();
@@ -33,7 +28,18 @@ private:
     SharedState& state;
     bool ready{false};
 
-    // Moteus instances would go here
-    // std::unique_ptr<moteus::Controller> yaw_motor;
-    // std::unique_ptr<moteus::Controller> pitch_motor;
+    std::unique_ptr<MoteusDriver> driver;
+    
+    // Motor IDs (From Globals or typical setup)
+    const uint32_t YAW_ID = 2;
+    const uint32_t PITCH_ID = 1;
+
+    // Feedback thread
+    std::thread feedback_thread;
+    std::atomic<bool> run_feedback{true};
+    void feedback_loop();
+
+    MotorState yaw_feedback;
+    MotorState pitch_feedback;
+    std::mutex feedback_mutex;
 };

@@ -9,6 +9,9 @@ find_package(OpenCV REQUIRED)
 find_package(Threads REQUIRED)
 find_package(CUDA REQUIRED)
 
+# Native RabbitMQ-C
+find_library(RABBITMQ_LIB rabbitmq REQUIRED)
+
 # TensorRT (NVIDIA)
 set(TENSORRT_INCLUDE_DIR /usr/include/x86_64-linux-gnu)
 set(TENSORRT_LIB_DIR /usr/lib/x86_64-linux-gnu)
@@ -30,6 +33,9 @@ set(SOURCES
     src/PIDController.cpp
     src/MotorController.cpp
     src/YoloEngine.cpp
+    src/MoteusDriver.cpp
+    src/MessageBridge.cpp
+    src/SensorReader.cpp
     src/RakshakSystem.cpp
     src/main.cpp
 )
@@ -43,5 +49,6 @@ target_link_libraries(${PROJECT_NAME}
     ${CUDA_LIBRARIES}
     ${NVINFER_LIB}
     ${NVONNXPARSER_LIB}
+    ${RABBITMQ_LIB}
     Threads::Threads
 )

@@ -1,0 +1,26 @@
+Migration Decisions & Logic
+
+
+  1. Motor Control: SocketCAN over `moteus` library
+   * Python: Used the moteus Python library which abstracts CAN communication.
+   * C++ Decision: We will use Native Linux SocketCAN.
+   * Reason: Moteus controllers use FD-CAN. Native SocketCAN in C++ provides significantly lower latency (sub-millisecond) compared to the Python wrapper. We will implement a MoteusDriver that talks directly to can0.
+
+
+  2. Messaging (C2): ZMQ Proxy Bridge
+   * Python: Used pika for RabbitMQ.
+   * C++ Decision: We will use ZeroMQ (ZMQ) as a bridge.
+   * Reason: C++ RabbitMQ libraries (amqp-cpp) have extremely heavy dependency chains. We will keep a tiny Python "Proxy" script to handle the RabbitMQ connection and forward messages to the C++ core via ZMQ (Unix Domain Sockets). This
+     is an industry-standard pattern for Jetson/Embedded systems to maintain C2 stability while keeping the C++ core lean.
+
+
+  3. Sensor Intake: Binary Struct Parsing
+   * Python: Used struct.unpack('<ii10f').
+   * C++ Decision: We will use a C-Style `struct` with `__attribute__((packed))`.
+   * Reason: C++ can map raw bytes from the serial port directly onto a struct memory map. This is much faster than struct.unpack.
+
+
+    Required Libraries
+   1. `libzmq3-dev`: For high-speed internal messaging.
+   2. `can-utils` / `libsocketcan-dev`: For motor communication.
+   3. `nlohmann-json`: (Already used) for command parsing.

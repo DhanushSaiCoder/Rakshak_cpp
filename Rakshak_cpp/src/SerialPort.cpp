@@ -29,6 +29,7 @@ bool SerialPort::open_port() {
         case 57600: speed = B57600; break;
         case 115200: speed = B115200; break;
         case 230400: speed = B230400; break;
+        case 250000: speed = B230400; break; // Closest standard or use custom
         default: speed = B115200; break;
     }
 
@@ -77,4 +78,9 @@ std::string SerialPort::read_line() {
         line += c;
     }
     return line;
+}
+
+int SerialPort::read_raw(uint8_t* buffer, int len) {
+    if (fd == -1) return -1;
+    return read(fd, buffer, len);
 }

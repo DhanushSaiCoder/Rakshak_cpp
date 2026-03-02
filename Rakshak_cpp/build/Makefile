@@ -201,6 +201,54 @@ src/MJPEGStreamer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rakshak_cpp.dir/build.make CMakeFiles/Rakshak_cpp.dir/src/MJPEGStreamer.cpp.s
 .PHONY : src/MJPEGStreamer.cpp.s
 
+src/MessageBridge.o: src/MessageBridge.cpp.o
+.PHONY : src/MessageBridge.o
+
+# target to build an object file
+src/MessageBridge.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rakshak_cpp.dir/build.make CMakeFiles/Rakshak_cpp.dir/src/MessageBridge.cpp.o
+.PHONY : src/MessageBridge.cpp.o
+
+src/MessageBridge.i: src/MessageBridge.cpp.i
+.PHONY : src/MessageBridge.i
+
+# target to preprocess a source file
+src/MessageBridge.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rakshak_cpp.dir/build.make CMakeFiles/Rakshak_cpp.dir/src/MessageBridge.cpp.i
+.PHONY : src/MessageBridge.cpp.i
+
+src/MessageBridge.s: src/MessageBridge.cpp.s
+.PHONY : src/MessageBridge.s
+
+# target to generate assembly for a file
+src/MessageBridge.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rakshak_cpp.dir/build.make CMakeFiles/Rakshak_cpp.dir/src/MessageBridge.cpp.s
+.PHONY : src/MessageBridge.cpp.s
+
+src/MoteusDriver.o: src/MoteusDriver.cpp.o
+.PHONY : src/MoteusDriver.o
+
+# target to build an object file
+src/MoteusDriver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rakshak_cpp.dir/build.make CMakeFiles/Rakshak_cpp.dir/src/MoteusDriver.cpp.o
+.PHONY : src/MoteusDriver.cpp.o
+
+src/MoteusDriver.i: src/MoteusDriver.cpp.i
+.PHONY : src/MoteusDriver.i
+
+# target to preprocess a source file
+src/MoteusDriver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rakshak_cpp.dir/build.make CMakeFiles/Rakshak_cpp.dir/src/MoteusDriver.cpp.i
+.PHONY : src/MoteusDriver.cpp.i
+
+src/MoteusDriver.s: src/MoteusDriver.cpp.s
+.PHONY : src/MoteusDriver.s
+
+# target to generate assembly for a file
+src/MoteusDriver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rakshak_cpp.dir/build.make CMakeFiles/Rakshak_cpp.dir/src/MoteusDriver.cpp.s
+.PHONY : src/MoteusDriver.cpp.s
+
 src/MotorController.o: src/MotorController.cpp.o
 .PHONY : src/MotorController.o
 
@@ -272,6 +320,30 @@ src/RakshakSystem.s: src/RakshakSystem.cpp.s
 src/RakshakSystem.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rakshak_cpp.dir/build.make CMakeFiles/Rakshak_cpp.dir/src/RakshakSystem.cpp.s
 .PHONY : src/RakshakSystem.cpp.s
+
+src/SensorReader.o: src/SensorReader.cpp.o
+.PHONY : src/SensorReader.o
+
+# target to build an object file
+src/SensorReader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rakshak_cpp.dir/build.make CMakeFiles/Rakshak_cpp.dir/src/SensorReader.cpp.o
+.PHONY : src/SensorReader.cpp.o
+
+src/SensorReader.i: src/SensorReader.cpp.i
+.PHONY : src/SensorReader.i
+
+# target to preprocess a source file
+src/SensorReader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rakshak_cpp.dir/build.make CMakeFiles/Rakshak_cpp.dir/src/SensorReader.cpp.i
+.PHONY : src/SensorReader.cpp.i
+
+src/SensorReader.s: src/SensorReader.cpp.s
+.PHONY : src/SensorReader.s
+
+# target to generate assembly for a file
+src/SensorReader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rakshak_cpp.dir/build.make CMakeFiles/Rakshak_cpp.dir/src/SensorReader.cpp.s
+.PHONY : src/SensorReader.cpp.s
 
 src/SerialPort.o: src/SerialPort.cpp.o
 .PHONY : src/SerialPort.o
@@ -435,6 +507,12 @@ help:
 	@echo "... src/MJPEGStreamer.o"
 	@echo "... src/MJPEGStreamer.i"
 	@echo "... src/MJPEGStreamer.s"
+	@echo "... src/MessageBridge.o"
+	@echo "... src/MessageBridge.i"
+	@echo "... src/MessageBridge.s"
+	@echo "... src/MoteusDriver.o"
+	@echo "... src/MoteusDriver.i"
+	@echo "... src/MoteusDriver.s"
 	@echo "... src/MotorController.o"
 	@echo "... src/MotorController.i"
 	@echo "... src/MotorController.s"
@@ -444,6 +522,9 @@ help:
 	@echo "... src/RakshakSystem.o"
 	@echo "... src/RakshakSystem.i"
 	@echo "... src/RakshakSystem.s"
+	@echo "... src/SensorReader.o"
+	@echo "... src/SensorReader.i"
+	@echo "... src/SensorReader.s"
 	@echo "... src/SerialPort.o"
 	@echo "... src/SerialPort.i"
 	@echo "... src/SerialPort.s"

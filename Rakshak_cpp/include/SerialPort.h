@@ -19,6 +19,7 @@ public:
 
     int write_data(const std::string& data);
     std::string read_line();
+    int read_raw(uint8_t* buffer, int len);
 
 private:
     std::string port_name;

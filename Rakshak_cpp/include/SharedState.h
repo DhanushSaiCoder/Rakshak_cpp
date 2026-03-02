@@ -52,9 +52,28 @@ public:
     std::atomic<double> current_yaw_deg{0.0};
     std::atomic<double> current_pitch_deg{0.0};
 
+    // --- Motor Feedback (Actual physical state) ---
+    std::atomic<double> actual_yaw_pos{0.0};
+    std::atomic<double> actual_yaw_vel{0.0};
+    std::atomic<double> actual_pitch_pos{0.0};
+    std::atomic<double> actual_pitch_vel{0.0};
+    std::atomic<bool> motors_ready{false};
+
+    // --- Firing Control ---
+    std::atomic<double> auto_target_hold_time{0.2};
+    std::atomic<double> burst_time{1.0};
+    std::atomic<bool> fire_status{false};
+    std::atomic<bool> solenoid_triggered{false};
+    std::atomic<double> hold_start_time{0.0};
+    std::atomic<int> acc_percentage_threshold{5}; // 5% error threshold
+
     // --- Complex Objects (Mutex protected) ---
     void set_detections(const std::vector<DetectedObject>& new_detections);
     std::vector<DetectedObject> get_detections();
+
+    // --- State Persistence ---
+    void load_state(const std::string& path);
+    void persist_state(const std::string& path);
 
     // --- Helper Methods ---
     static double map_value(double min1, double max1, double min2, double max2, double value);

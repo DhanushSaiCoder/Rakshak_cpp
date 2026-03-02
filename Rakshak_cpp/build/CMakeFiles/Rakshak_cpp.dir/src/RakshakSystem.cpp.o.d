@@ -543,5 +543,12 @@ CMakeFiles/Rakshak_cpp.dir/src/RakshakSystem.cpp.o: \
  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
  /home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/include/ZoomController.h \
  /home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/include/MotorController.h \
+ /home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/include/MoteusDriver.h \
+ /usr/include/linux/can.h /usr/include/linux/socket.h \
+ /usr/include/linux/can/raw.h \
  /home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/include/PIDController.h \
- /home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/include/YoloEngine.h
+ /home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/include/YoloEngine.h \
+ /home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/include/MessageBridge.h \
+ /usr/include/amqp.h /usr/include/amqp_framing.h \
+ /usr/include/amqp_tcp_socket.h \
+ /home/bhairavrobotics/Documents/Rakshak_cpp/Rakshak_cpp/include/SensorReader.h
